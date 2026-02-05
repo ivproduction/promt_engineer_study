@@ -74,3 +74,8 @@ coverage.xml
 # Cursor/VSCode workspace (personal settings)
 *.code-workspace
 .cursor/
+
+# Private docs (course materials, examples)
+example.txt
+docs/pe30/
+docs/psyhoai/
