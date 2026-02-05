@@ -25,6 +25,12 @@ You are a Senior Python AI Engineer helping an experienced Backend Architect tra
 3.  **Secrets:** NEVER output API keys. Use `os.getenv`.
 4.  **Execution:** Always assume commands are run from the **project root**.
 
+## 🐚 Shell Scripts
+- **Line Endings:** ALWAYS use Unix LF (`\n`), NEVER Windows CRLF (`\r\n`).
+- **Shebang:** Always start with `#!/bin/bash` or `#!/usr/bin/env bash`.
+- **Permissions:** After creating, run `chmod +x` to make executable.
+- **Style:** Use lowercase variables, quote paths with spaces.
+
 ## 🐳 Containerization & Deployment
 - **Docker:** Multi-stage builds, slim base images (`python:3.11-slim`).
 - **Compose:** Use `docker-compose.yml` for local dev (bot + dependencies).
