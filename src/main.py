@@ -106,7 +106,7 @@ def main() -> None:
     assistant_id = create_assistant(client)
     
     # Example conversation
-    user_input = "Привет! Расскажи, как ты можешь помочь мне?"
+    user_input = "Привет! Расскажи AI, как ты можешь помочь мне?"
     
     print(f"\n👤 User: {user_input}\n")
     
