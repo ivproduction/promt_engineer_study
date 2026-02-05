@@ -27,4 +27,9 @@ echo "🚀 Starting bot..."
 echo "   Press Ctrl+C to stop"
 echo ""
 
-docker run -it --rm --env-file $ENV_FILE $IMAGE_NAME
+# Check if running in interactive terminal
+if [ -t 0 ]; then
+    docker run -it --rm --env-file $ENV_FILE $IMAGE_NAME
+else
+    docker run --rm --env-file $ENV_FILE $IMAGE_NAME
+fi
