@@ -1,0 +1,83 @@
+{
+  "name": "PsychoAI Dev Environment",
+  "image": "python:3.11-slim",
+
+  // VS Code / Cursor extensions
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Python core
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        
+        // Docker & DevOps
+        "ms-azuretools.vscode-docker",
+        
+        // Git
+        "eamodio.gitlens",
+        
+        // DX improvements
+        "usernamehw.errorlens",
+        "oderwat.indent-rainbow",
+        
+        // Config files
+        "redhat.vscode-yaml",
+        "tamasfe.even-better-toml",
+        
+        // Icons
+        "pkief.material-icon-theme",
+        
+        // API testing & Jupyter
+        "rangav.vscode-thunder-client",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        // Editor
+        "editor.fontSize": 14,
+        "editor.formatOnSave": true,
+        "editor.minimap.enabled": false,
+        "editor.rulers": [88, 120],
+        "editor.bracketPairColorization.enabled": true,
+        
+        // Files
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        
+        // Python
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoImportCompletions": true,
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          }
+        },
+        
+        // Terminal
+        "terminal.integrated.defaultProfile.linux": "bash",
+        
+        // Icons
+        "workbench.iconTheme": "material-icon-theme"
+      }
+    }
+  },
+
+  // Post-create commands
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt 2>/dev/null || echo 'No requirements.txt yet'",
+  
+  // Environment variables
+  "containerEnv": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1"
+  },
+
+  // Ports to forward
+  "forwardPorts": [8000, 8080],
+
+  // Run as non-root user
+  "remoteUser": "root"
+}
