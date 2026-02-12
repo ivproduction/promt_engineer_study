@@ -4,7 +4,8 @@
   // VS Code / Cursor extensionss
   "customizations": {
     "vscode": {
-      "extensions        // Python core - my
+      "extensions": [
+        // Python core - my1
         "ms-python.python",
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
