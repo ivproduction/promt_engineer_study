@@ -1,0 +1,28 @@
+{
+  // Editor
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [88, 120],
+  "editor.bracketPairColorization.enabled": true,
+
+  // Files
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Python analysis & formatting
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+
+  // Project venv
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
+
+  // UI
+  "workbench.iconTheme": "material-icon-theme",
+  "locale": "en"
+}
