@@ -28,7 +28,6 @@
       "settings": {
         // Editor
         "editor.fontSize": 14,
-        "editor.formatOnSave": true,
         "editor.minimap.enabled": false,
         "editor.rulers": [
           88,
@@ -44,11 +43,7 @@
         "python.analysis.typeCheckingMode": "basic",
         "python.analysis.autoImportCompletions": true,
         "[python]": {
-          "editor.defaultFormatter": "charliermarsh.ruff",
-          "editor.codeActionsOnSave": {
-            "source.fixAll": "explicit",
-            "source.organizeImports": "explicit"
-          }
+          "editor.defaultFormatter": "charliermarsh.ruff"
         },
         // Terminal
         "terminal.integrated.defaultProfile.linux": "bash",
