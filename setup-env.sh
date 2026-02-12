@@ -10,27 +10,14 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 
 # 4. Установи нужную версию Python
-pyenv install 3.11.9
+pyenv install 3.14.3
 
 # 5. В проекте
 cd ~/Projects/zcode/promt_engineer_study
-pyenv local 3.11.9    # создаст файл .python-version
+pyenv local 3.14.3    # создаст файл .python-version
 
 # 6. Виртуальное окружение
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-
-
-cursor --install-extension ms-python.python \
-       --install-extension charliermarsh.ruff \
-       --install-extension ms-azuretools.vscode-docker \
-       --install-extension eamodio.gitlens \
-       --install-extension usernamehw.errorlens \
-       --install-extension oderwat.indent-rainbow \
-       --install-extension redhat.vscode-yaml \
-       --install-extension tamasfe.even-better-toml \
-       --install-extension pkief.material-icon-theme \
-       --install-extension rangav.vscode-thunder-client \
-       --install-extension ms-toolsai.jupyter
 
