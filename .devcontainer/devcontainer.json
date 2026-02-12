@@ -5,7 +5,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        // Python core - my1
+        // Python core - my2
         "ms-python.python",
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
