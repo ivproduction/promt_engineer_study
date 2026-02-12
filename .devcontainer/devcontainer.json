@@ -67,7 +67,7 @@
   },
 
   // Post-create commands
-  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt 2>/dev/null || echo 'No requirements.txt yet'",
+  "postCreateCommand": "apt-get update && apt-get install -y curl git && pip install --upgrade pip && (pip install -r requirements.txt 2>/dev/null || echo 'No requirements.txt yet')",
   
   // Environment variables
   "containerEnv": {
