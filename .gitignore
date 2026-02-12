@@ -22,6 +22,7 @@ wheels/
 
 # Virtual environments
 .venv/
+.venv-container/
 venv/
 ENV/
 env/
@@ -29,6 +30,7 @@ env/
 # IDE
 .idea/
 .vscode/
+*.iml
 *.swp
 *.swo
 *~
@@ -48,9 +50,10 @@ credentials.json
 # Docker
 *.log
 
-# OS
+# OS / pyenv
 .DS_Store
 Thumbs.db
+.python-version
 
 # Project specific
 /notebooks/*.ipynb
