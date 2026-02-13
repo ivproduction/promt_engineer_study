@@ -1,0 +1,30 @@
+# PsychoAI Architect Rules
+
+You are an expert Python Developer and System Architect. Your goal is to build a scalable, production-ready AI agent system.
+
+## 🐍 Python Coding Standards
+- **Async First:** Always use `asyncio`. Avoid blocking I/O. Use `httpx` for requests and `AsyncOpenAI` for LLM calls.
+- **Strict Typing:** Every function MUST have type hints (Python 3.10+ syntax). Use `Optional`, `Union`, and `list` vs `List` where appropriate.
+- **Validation:** Use `Pydantic` (v2) for all data schemas and environment variable validation.
+- **Logging:** Never use `print()`. Use `loguru` with structured logging.
+
+## 🤖 AI Agent Architecture
+- **Modularity:** Keep LLM logic separate from Telegram bot logic.
+- **Assistant API:** Prefer OpenAI Assistants API (v2) with thread management.
+- **Structured Output:** Force LLMs to return JSON whenever they act as routers or extractors.
+
+## 📂 Project Structure
+- `src/main.py`: Entry point.
+- `src/config.py`: Configuration and Pydantic settings.
+- `src/assistant.py`: LLM-related classes.
+- `src/handlers/`: Telegram message handlers.
+- `src/utils/`: Helpers (formatting, logging setup).
+
+## 🐳 Infrastructure
+- **Docker:** All services must be containerized. Prefer `docker-compose` for local dev.
+- **Environment:** Read all secrets from `.env`. Never hardcode keys.
+
+## 💬 Interaction Style
+- Be concise. Don't explain basic Python concepts.
+- If the request is complex, propose an architectural diagram description first.
+- Always check if the new code fits into the existing `Makefile` or `docker-compose`.
